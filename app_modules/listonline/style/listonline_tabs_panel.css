@@ -1,0 +1,143 @@
+.listonline__tabs-panel{
+    max-width: 960px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;    
+    max-height: 50%;
+    height: 0;
+    width: 100%;
+    background-color:white;    
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.5s;
+    transform:translate(-50%);
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.listonline__tabs-panel-button-block{
+    display: flex;
+    width: calc(100% - 40px);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 1;
+}
+
+.listonline__tabs-panel-button-block-add-tab{
+    position: absolute;
+    right: 20px;
+    border: none; 
+    outline: none;
+    height: 32px;
+    min-width: 32px;
+    background-color: white;
+    background-image: url("../image/add_article_outline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 65%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.listonline__tabs-panel-button-block-edit-tab{
+    border: none;
+    outline: none;
+    height: 32px;
+    min-width: 32px;
+    background-color: white;
+    background-image: url("../image/edit_outline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 65%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.listonline__tabs-panel-button-block-delete-tab{
+    border: none; 
+    outline: none;
+    height: 32px;
+    min-width: 32px;
+    background-color: white;
+    background-image: url("../image/delete_outline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 65%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin-left: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.listonline__tabs-panel-tabs-area{     
+    width: calc(100% - 40px);
+    height: max-content;
+    margin-top: 20px;    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* gap: 10px;     */
+}
+
+.listonline__tab{    
+    box-sizing: border-box;
+    height: max-content;
+    width: min-content;
+    border-radius: 13px;
+    position: relative;
+    background-color: var(--main-color-two);    
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    transition: opacity 2s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* .tab::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -2px; left: -2px;   
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);    
+    background: linear-gradient(45deg, #cddb00, white, #cddb00, white);
+    border-radius: 25px;
+} */
+
+.listonline__tab-screen{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.1;
+    border-radius: 5px;
+}
+
+.listonline__tab-content{
+    border: none;
+    outline: none;
+    z-index: 1;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-color-two);
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    height: min-content;
+    width: max-content;
+    min-width: 20px;
+}

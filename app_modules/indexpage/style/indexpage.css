@@ -1,0 +1,36 @@
+html{
+    height: 100%;
+}
+
+body{
+    --main-color-one: #1877f2;
+    --main-color-two: ;
+    --main-color-three: ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amaranth', sans-serif;
+    margin: 0;   
+}
+
+.indexpage__logo{
+    position: relative;
+    cursor: default;
+}
+
+.indexpage__logo-part-1{
+    font-size: 52px;
+}
+
+.indexpage__logo-part-1-list{
+    color:var(--main-color-one);
+}
+
+.indexpage__logo-part-2{
+    position: absolute;
+    font-size: 18px;
+    font-family: 'Bad Script', cursive;
+    bottom: -20px;
+    right: 5px;
+}

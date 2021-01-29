@@ -1,0 +1,79 @@
+.listonline__header{    
+    max-width: 1000px;
+    min-width: 300px;
+    width: 100%;    
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.listonline__header-logo{
+    background-color: white;
+    cursor: default;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-family: 'Amaranth', sans-serif;
+    /* margin: 2px;     */
+    font-size: 22px;
+}
+
+.listonline__header-logo-list{
+    color: var(--main-color-two);
+}
+
+.listonline__header-logo-online{
+    color: black;
+}
+
+.listonline__header-button-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.listonline__header-button-block-color-panel{
+    height: 32px;
+    width: 32px;   
+    background: white;
+    border-radius: 5px;
+    margin-left: 20px;    
+    box-sizing: border-box; 
+}
+
+.listonline__header-button-block-add-article{
+    border: none; 
+    outline: none;
+    height: 32px;
+    min-width: 32px;
+    background-color: white;
+    background-image: url("../image/add_article_outline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 65%;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.listonline__header-button-block-open-tabs-panel{
+    border: none; 
+    outline: none;
+    height: 32px;
+    min-width: 32px;
+    background-color: white;
+    background-image: url("../image/open_tabs_panel_outline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 65% 65%;
+    border-radius: 5px;
+    margin-left: 20px;
+    transform: rotate(0deg);
+    transition: transform 0.7s;
+}

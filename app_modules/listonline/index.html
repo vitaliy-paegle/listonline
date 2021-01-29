@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script type="module" src="/listonline/code/preloader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex"/>
+    <link rel="shortcut icon" href="../indexpage/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/listonline/style/main.css">    
+    <title>ListOnline</title>
+</head>
+    <body style="opacity: 0; transition: opacity 1s;">
+        
+        <main class="listonline">
+            <section class="listonline__header">
+                <div class="listonline__header-logo">
+                    <span class="listonline__header-logo-list">List</span><span class="listonline__header-logo-online">Online</span>
+                </div>
+                <div class="listonline__header-button-block">
+                    <button class="listonline__header-button-block-open-tabs-panel"></button>
+                    <div class="listonline__header-button-block-color-panel">
+                        <canvas class="listonline-header-button-block-color-panel-canvas-area" width="26" height="26"></canvas>
+                    </div>
+                    <button class="listonline__header-button-block-add-article"></button>
+                </div>            
+            </section>    
+            <section class="listonline__basic">
+                <div class="listonline__basic-article-area"></div>
+            </section>    
+            <section class="listonline__tabs-panel">
+                <div class="listonline__tabs-panel-tabs-area"></div>
+                <div class="listonline__tabs-panel-button-block">
+                    <button class="listonline__tabs-panel-button-block-edit-tab" disabled></button>
+                    <button class="listonline__tabs-panel-button-block-delete-tab" disabled></button>
+                    <button class="listonline__tabs-panel-button-block-add-tab"></button>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script type="module" src="/listonline/code/main.js"></script>
+</html>

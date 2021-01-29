@@ -1,0 +1,14 @@
+@media (max-width: 800px){
+    .indexpage__logo-part-1{
+        font-size: 36px;
+    }  
+
+    .indexpage__logo-part-2{        
+        font-size: 12px;        
+        bottom: -12px;
+        right: 5px;
+    }
+}
+
+
+

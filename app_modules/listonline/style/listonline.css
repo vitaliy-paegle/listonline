@@ -1,0 +1,11 @@
+body{
+    --main-color-one: #1877f2;
+    --main-color-two: #b6b6b6;
+    --main-color-three:#42b72a ;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-color-two);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
