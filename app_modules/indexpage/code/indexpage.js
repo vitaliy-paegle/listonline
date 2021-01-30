@@ -1,7 +1,7 @@
 export const indexpage = {
-    indexlogo: document.querySelector('.indexpage__logo'),
+    buttonTry: document.querySelector('.indexpage__button-block-try'),
     updateHandlers: function(){
-        this.indexlogo.addEventListener('click', () => {
+        this.buttonTry.addEventListener('click', () => {
             window.location.replace('https://listonline.ru/user_test_page');
         })
     },

@@ -1,12 +1,16 @@
 @media (max-width: 800px){
     .indexpage__logo-part-1{
-        font-size: 36px;
+        font-size: 40px;
     }  
 
     .indexpage__logo-part-2{        
-        font-size: 12px;        
-        bottom: -12px;
+        font-size: 14px;        
+        bottom: -15px;
         right: 5px;
+    }
+
+    .indexpage__button-block-try, .indexpage__button-block-registration{
+        font-size: 12px;   
     }
 }
 

@@ -1,10 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 html{
     height: 100%;
 }
 
-body{
-    --main-color-one: #1877f2;
-    --main-color-two: ;
+body{    
+    --main-color-one: #ff420e;
+    --main-color-two: #89da59;
     --main-color-three: ;
     height: 100%;
     display: flex;
@@ -14,7 +18,12 @@ body{
     margin: 0;   
 }
 
+.indexpage{
+    position: relative;
+}
+
 .indexpage__logo{
+    display: none;
     position: relative;
     cursor: default;
 }
@@ -33,4 +42,74 @@ body{
     font-family: 'Bad Script', cursive;
     bottom: -20px;
     right: 5px;
+}
+
+.indexpage__button-block{
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.indexpage__button-block-try, .indexpage__button-block-registration{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: white;    
+}
+
+.indexpage__registration{
+    width: 300px;
+    height: 100px;
+    background-color: var(--main-color-two);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;  
+}
+
+.indexpage__registration-block-email{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;    
+}
+
+.indexpage__registration-block-email-field{
+    border: none;
+    outline: none;
+    margin: 5px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.indexpage__registration-block-email-button{
+    border: none;
+    outline: none;
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.indexpage__registration-block-remember{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;       
+}
+.indexpage__registration-block-remember-text{
+
+}
+.indexpage__registration-block-remember-field{
+    box-sizing: border-box;
+    background-color: var(--main-color-one);
+    width: 5px;
+    border: 10px solid white;
 }

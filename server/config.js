@@ -7,7 +7,7 @@ const config = {
         const data = 
         [
             {
-                tabName: 'Вкладка №1', activ: true, mainColor: 'rgb(24,119,242,1)',
+                tabName: 'Вкладка №1', activ: true, mainColor: 'rgb(182,182,182,1)',
                 articles: [
                     {
                         content: '<div style="font-weight: 900;">Самое время создать свою первую заметку...</div>',
