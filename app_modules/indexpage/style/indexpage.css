@@ -22,8 +22,7 @@ body{
     position: relative;
 }
 
-.indexpage__logo{
-    display: none;
+.indexpage__logo{    
     position: relative;
     cursor: default;
 }
@@ -42,22 +41,6 @@ body{
     font-family: 'Bad Script', cursive;
     bottom: -20px;
     right: 5px;
-}
-
-.indexpage__button-block{
-    display: flex;
-    margin-top: 40px;
-    width: 100%;
-    justify-content:space-between;
-}
-
-.indexpage__button-block-try, .indexpage__button-block-registration{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background-color: white;    
 }
 
 .indexpage__registration{
@@ -112,4 +95,51 @@ body{
     background-color: var(--main-color-one);
     width: 5px;
     border: 10px solid white;
+}
+
+.indexpage__menu{
+    position: relative;
+    display: flex;    
+    background-color: var(--main-color-two);
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index__menu-items{
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid white;
+    padding-right: 15px;
+}
+
+.indexpage__menu-items-button{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--main-color-two);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.indexpage__menu-items-button:hover{
+    color: var(--main-color-one)
+}
+
+.indexpage__menu-button-close{
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color-two);
+    background-image: url('../image/button_close_256_outline.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    padding: 0;
+    margin-left: 20px;
+    
 }
