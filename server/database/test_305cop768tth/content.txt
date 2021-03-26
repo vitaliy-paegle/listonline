@@ -1,1 +1,0 @@
-[{"tabName":"Вкладка №1","activ":true,"mainColor":"rgb(24,119,242,1)","articles":[{"content":"","date":"29.01.2021&nbsp;|&nbsp;","time":"15:04"},{"content":"<div style=\"font-weight: 900;\">Самое время создать свою первую заметку...</div>","date":"29.01.2021&nbsp;|&nbsp;","time":"15:04"}]}]
