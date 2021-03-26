@@ -1,5 +1,4 @@
 const express =  require('express');
-const bodyParser = require('body-parser');
 
 const config = require('./config');
 const userPage = require('./user_page');
@@ -9,8 +8,8 @@ const userTestPage = require('./user_test_page')
 const app = express();
 app.listen(49337);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/listonline', express.static(`${config.manyDir}/app_modules/listonline`));
 app.use('/indexpage',express.static(`${config.manyDir}/app_modules/indexpage`));
