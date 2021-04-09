@@ -14,6 +14,7 @@ module.exports = {
                     setTimeout(async () => {
                         await backendApi.removeFile(`server/database/test_${id}/content.txt`);
                         await backendApi.removeDir(`server/database/test_${id}`);
+                        console.log("delete page")
                     }, config.timeoutDeleteTestPage)
                 } else {
                     res.sendFile(`${config.manyDir}/app_modules/listonline/index.html`);

@@ -43,25 +43,6 @@ body{
     right: 5px;
 }
 
-.indexpage__registration{
-    width: 300px;
-    height: 100px;
-    background-color: var(--main-color-two);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;  
-}
-
-.indexpage__registration-block-email{
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    width: 100%;    
-}
-
 .indexpage__registration-block-email-field{
     border: none;
     outline: none;
@@ -70,34 +51,11 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     border-radius: 5px;
+    max-width: 200px;
+    padding: 0 5px 0 5px;
 }
 
-.indexpage__registration-block-email-button{
-    border: none;
-    outline: none;
-    margin: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.indexpage__registration-block-remember{
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    width: 100%;       
-}
-.indexpage__registration-block-remember-text{
-
-}
-.indexpage__registration-block-remember-field{
-    box-sizing: border-box;
-    background-color: var(--main-color-one);
-    width: 5px;
-    border: 10px solid white;
-}
-
-.indexpage__menu{
+.indexpage__menu, .indexpage__registration{
     position: relative;
     display: flex;    
     background-color: var(--main-color-two);
@@ -107,7 +65,7 @@ body{
     align-items: center;
 }
 
-.index__menu-items{
+.index__menu-items, .index__registration-items{
     display: flex;
     flex-direction: column;
     border-right: 3px solid white;
@@ -129,7 +87,7 @@ body{
     color: var(--main-color-one)
 }
 
-.indexpage__menu-button-close{
+.indexpage__menu-button-close, .indexpage__registration-button-close{
     border: none;
     outline: none;
     width: 40px;

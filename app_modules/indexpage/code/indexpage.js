@@ -7,7 +7,6 @@ export const indexpage = {
         <div class="index__menu-items">
             <button class="indexpage__menu-items-button indexpage__menu-items-button-enter">Войти</button>
             <button class="indexpage__menu-items-button indexpage__menu-items-button-try">Попробовать</button>
-            <button class="indexpage__menu-items-button indexpage__menu-items-button-registration">Регистрация</button>
             <button class="indexpage__menu-items-button indexpage__menu-items-button-registration">Контакты</button>                    
         </div>
         <button class="indexpage__menu-button-close"></button>
@@ -20,36 +19,42 @@ export const indexpage = {
             <div class="indexpage__logo-part-2">электронный блокнот</div>
         </section>`,
     indexpageRegistrationHtml:
-        `<section class="indexpage__registration" style="display: none;">
-            <div class="indexpage__registration-block-email">
-                <input type="text" class="indexpage__registration-block-email-field">
-                <button class="indexpage__registration-block-email-button">ОК</button>
+        `<section class="indexpage__registration">
+            <div class="index__registration-items">
+                <input type="text" placeholder="e-mail" class="indexpage__registration-block-email-field">                    
             </div>
-            <div class="indexpage__registration-block-remember">
-                <label class="indexpage__registration-block-remember-text">Запомнить меня</label>
-                <div class="indexpage__registration-block-remember-field"></div>
-            </div>
+            <button class="indexpage__registration-button-close"></button>
         </section>`,
     updateHandlers: function(){
         if (this.indexpage.getAttribute('state') == 'menu') {
             const buttonTry = document.querySelector('.indexpage__menu-items-button-try');            
             buttonTry.addEventListener('click', () => {
-                window.location.replace('https://listonline.ru/user_test_page');
-                
+                window.location.replace('https://listonline.ru/user_test_page');                
+            })
+            const buttonEnter = document.querySelector('.indexpage__menu-items-button-enter');
+            buttonEnter.addEventListener('click', () => {
+                this.indexpage.innerHTML = this.indexpageRegistrationHtml;
+                this.indexpage.setAttribute('state', 'enter');
+                this.updateHandlers();             
+            })
+            const buttonClose = document.querySelector('.indexpage__menu-button-close');
+            buttonClose.addEventListener('click', () => {
+                this.indexpage.innerHTML = this.indexpageLogoHtml;
+                this.indexpage.setAttribute('state', 'logo');
+                this.updateHandlers();             
             })
         }
         
-        if (this.indexpage.getAttribute('state') == 'logo') {           
-            this.indexpageLogo.addEventListener('click', () => {
+        if (this.indexpage.getAttribute('state') == 'logo') {
+            const indexpageLogo = document.querySelector('.indexpage__logo');        
+            indexpageLogo.addEventListener('click', () => {
                 this.indexpage.innerHTML = this.indexpageMenuHtml;
                 this.indexpage.setAttribute('state', 'menu');
                 this.updateHandlers();
             })
         }
     },
-    changeIndexpageState: function(){
 
-    },
     preloadImages: function(arrayImages){
         arrayImages.forEach((adress) => {
             let image = document.createElement('div');
