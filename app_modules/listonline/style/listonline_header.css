@@ -13,7 +13,7 @@
 .listonline__header-logo{
     background-color: white;
     cursor: default;
-    border-radius: 5px;
+    border-radius: 10px 10px 0 10px;
     padding-left: 5px;
     padding-right: 5px;
     height: 32px;

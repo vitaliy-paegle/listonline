@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/main.js",
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server/main.js"
+  },
   "author": "Paegle V.V.",
   "license": "ISC",
   "dependencies": {

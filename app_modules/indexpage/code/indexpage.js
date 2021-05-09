@@ -7,9 +7,8 @@ export const indexpage = {
         <div class="index__menu-items">
             <button class="indexpage__menu-items-button indexpage__menu-items-button-enter">Войти</button>
             <button class="indexpage__menu-items-button indexpage__menu-items-button-try">Попробовать</button>
-            <button class="indexpage__menu-items-button indexpage__menu-items-button-registration">Контакты</button>                    
-        </div>
-        <button class="indexpage__menu-button-close"></button>
+            <button class="indexpage__menu-items-button indexpage__menu-items-button-contacts">Контакты</button>          
+        </div>        
     </section>`,
     indexpageLogoHtml: 
         `<section class="indexpage__logo">
@@ -19,11 +18,9 @@ export const indexpage = {
             <div class="indexpage__logo-part-2">электронный блокнот</div>
         </section>`,
     indexpageRegistrationHtml:
-        `<section class="indexpage__registration">
-            <div class="index__registration-items">
-                <input type="text" placeholder="e-mail" class="indexpage__registration-block-email-field">                    
-            </div>
-            <button class="indexpage__registration-button-close"></button>
+        `<section class="indexpage__registration">            
+            <input type="text" placeholder="e-mail" class="indexpage__registration-block-email-field">
+            <button class="indexpage__registration-button-ok">OK</button>                 
         </section>`,
     updateHandlers: function(){
         if (this.indexpage.getAttribute('state') == 'menu') {
