@@ -1,7 +1,7 @@
 const config = {
     manyDir:'/home/listonline',
     adminIP: '50.7.93.83',    
-    timeoutDeleteTestPage: 300000,
+    timeoutDeleteTestPage: 30000,
     defaultContent: function ()  {
         const date = new Date();
         const data = 

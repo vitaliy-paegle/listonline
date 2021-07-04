@@ -118,7 +118,7 @@ export const connect = {
     },
     closePageEvent: function(){
         window.addEventListener('beforeunload', () => {
-            localStorage.clear();
+            //localStorage.clear();
         })
     },
     start: function(){

@@ -10,7 +10,7 @@ module.exports = {
                     let id = ID.generateID();
                     await backendApi.makeDir(`server/database/test_${id}`);
                     await backendApi.writeFile(`server/database/test_${id}/content.txt`, JSON.stringify(config.defaultContent()));
-                    res.redirect(`https://listonline.ru/user_page/?id=test_${id}`);
+                    res.redirect(`https://listonline.ru/user_page/?id=test_${id}`);                    
                     setTimeout(async () => {
                         await backendApi.removeFile(`server/database/test_${id}/content.txt`);
                         await backendApi.removeDir(`server/database/test_${id}`);

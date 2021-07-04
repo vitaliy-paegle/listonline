@@ -69,7 +69,7 @@ body{
     padding: 0 10px 0 10px;
 }
 
-.indexpage__menu, .indexpage__registration{
+.indexpage__registration{
     position: relative;
     display: flex;    
     background-color: white;
@@ -79,21 +79,7 @@ body{
     align-items: center;
 }
 
-.index__menu-items, .index__registration-items{
+.index__registration-items{
     display: flex;
     flex-direction: column;
-}
-
-
-.indexpage__menu-items-button{
-    outline: none;
-    color: white;
-    background-color: var(--main-color-one);
-    border: none;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 5px 20px 5px 20px;
 }

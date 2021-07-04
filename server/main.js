@@ -2,8 +2,9 @@ const express =  require('express');
 
 const config = require('./config');
 const userPage = require('./user_page');
-const createPage = require('./create_page')
-const userTestPage = require('./user_test_page')
+const createPage = require('./create_page');
+const userTestPage = require('./user_test_page');
+const email = require('./email');
 
 const app = express();
 app.listen(49337);
@@ -22,6 +23,9 @@ app.use('/user_test_page', (req, res) => {
 });
 app.use('/create_page', (req, res) => {
     createPage.router(req, res);
+});
+app.use('/email', (req, res) => {
+    email.sendMail(req, res);
 });
 
 app.get('/', (req, res) => {
