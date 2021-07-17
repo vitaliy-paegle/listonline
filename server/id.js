@@ -6,6 +6,13 @@ const ID = {
             return arrayKeys[Math.floor(Math.random() * arrayKeys.length)]
         }
         return  `${key(numbers)}${key(numbers)}${key(numbers)}${key(letters)}${key(letters)}${key(letters)}${key(numbers)}${key(numbers)}${key(numbers)}${key(letters)}${key(letters)}${key(letters)}`
+    },
+    generateEmailCode: function(){        
+        const numbers = [0,1,2,3,4,5,6,7,8,9];
+        function key (arrayKeys) {
+            return arrayKeys[Math.floor(Math.random() * arrayKeys.length)]
+        }
+        return  `${key(numbers)}${key(numbers)}${key(numbers)}`
     }
 }
 module.exports = ID;

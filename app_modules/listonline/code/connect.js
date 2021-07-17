@@ -20,8 +20,8 @@ export const connect = {
     },
 
     exchangeDataLS: async function(action, content){
-        const searchString = new URLSearchParams(window.location.search);
-        const id =  searchString.get('id');
+        //const searchString = new URLSearchParams(window.location.search);
+        const id =  localStorage.getItem(`listID`);
         
         switch (action) {
             case 'getData':

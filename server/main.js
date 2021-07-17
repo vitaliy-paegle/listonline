@@ -13,19 +13,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/listonline', express.static(`${config.manyDir}/app_modules/listonline`));
-app.use('/indexpage',express.static(`${config.manyDir}/app_modules/indexpage`));
+app.use('/indexpage', express.static(`${config.manyDir}/app_modules/indexpage`));
 
 app.use('/user_page', (req, res) => {
     userPage.router(req, res);
 });
-app.use('/user_test_page', (req, res) => {
-    userTestPage.router(req, res);
-});
 app.use('/create_page', (req, res) => {
     createPage.router(req, res);
 });
+app.use('/user_test_page', (req, res) => {
+    userTestPage.router(req, res);
+});
 app.use('/email', (req, res) => {
-    email.sendMail(req, res);
+    email.router(req, res);
 });
 
 app.get('/', (req, res) => {

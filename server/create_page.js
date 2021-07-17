@@ -31,7 +31,26 @@ const createPage = {
                 }
             break;
         }        
-    }
+    },
+    createPageForUser: async function(id) {         
+        async function generateQR(id){                      
+            if ((await backendApi.makeDir(`server/database/${id}`)).successful) {
+                return new Promise((res, rej) => {
+                    qrcode.toFile(`server/database/${id}/${id}.png`, `https://listonline.ru/user_page?id=${id}`, 
+                    {color: {dark: '#000', light: '#0000'/* Transparent background */}},
+                    (err) => {err ? rej(err) : res()}
+                    )
+                })
+                .then(() => {return {successful: true}})
+                .catch((err) => {return {successful: false, error: err}})
+            }
+        }                              
+                          
+        if ((await generateQR(id)).successful) {
+            backendApi.writeFile(`server/database/${id}/content.txt`, JSON.stringify(config.defaultContent()))
+        }                  
+        
+    }        
 }
 
 module.exports = createPage
