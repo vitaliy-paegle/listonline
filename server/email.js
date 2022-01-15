@@ -12,6 +12,7 @@ module.exports = {
 
       case 'POST':
         let dbConfig = JSON.parse((await backendApi.readFile('server/database/config.json')).content);
+        console.log(req.body.email)
         switch (req.body.action) {
           case 'create code':
             let emailCode = ID.generateEmailCode();            
@@ -53,18 +54,10 @@ module.exports = {
   },   
   sendMail: async function(destination, text) {
 
-    let transporter = nodemailer.createTransport({
-      host: "smtp.jino.ru",
-      port: 465,
-      secure: true,
-      auth: {
-        user: "info@listonline.ru",
-        pass: "v19851985",
-      },
-    });
+    let transporter = nodemailer.createTransport(config.emailInfo);
 
     let info = await transporter.sendMail({
-      from: "info@listonline.ru",
+      from: "mail@listonline.ru",
       to: destination,
       subject: "ListOnline.ru вход в аккаунт",
       text: "Код: " + text,

@@ -104,7 +104,7 @@ export const changeArticles = {
                     clearInterval(check);
                     window.addEventListener('resize', deactivArticles)
                 }
-            }, 1000)
+            }, 1500)
         }
         function deactivArticles(){
             for (let elem of changeArticles.articlesContent) {
@@ -112,13 +112,14 @@ export const changeArticles = {
             }
             window.removeEventListener('resize', deactivArticles)
         }
-        checkEndResizingWindow();
+        //checkEndResizingWindow();
         this.updateDate(article);
         article.querySelector('.listonline__article-content').addEventListener('blur', this.saveArticlesContent.bind(this));
         
     },
     saveArticlesContent: function(data){
         let articlesData = [];
+
         for (let elem of this.articles) {     
             let article = {
                 content: elem.querySelector('.listonline__article-content').innerHTML,
@@ -127,7 +128,9 @@ export const changeArticles = {
             }
             articlesData.push(article)
         }
-        connect.controller({action: 'update_articles', data: articlesData});
+        
+        setTimeout(()=>{connect.controller({action: 'update_articles', data: articlesData})}, 50) ;
+  
     },
     showButtonPanel: function(eventStart){
         let buttonPanel = this.querySelector('.listonline__article-button-panel');
@@ -210,6 +213,8 @@ export const changeArticles = {
         }
        switch(action){
             case 'update_page':
+                serverData = await connect.exchangeDataServer('getData');
+                await connect.exchangeDataLS('setData', serverData);            
                 serverData.forEach((elem) => {
                     if (elem.activ) {
                         document.querySelector('body').style.setProperty('--main-color-two', elem.mainColor);
@@ -218,10 +223,11 @@ export const changeArticles = {
                         })
                     }
                 })
+
                 this.updateHandlers();
             break;
-            case 'update_articles':
-                this.articleArea.innerHTML = '';
+            case 'update_articles':                
+                this.articleArea.innerHTML = '';                
                 serverData.forEach((elem) => {
                     if (elem.activ) {                    
                         elem.articles.forEach((article) => {
@@ -229,8 +235,8 @@ export const changeArticles = {
                         })
                         document.querySelector('body').style.setProperty('--main-color-two', elem.mainColor); 
                     }
-                })
-                this.updateHandlers();
+                })                
+                this.updateHandlers();                
             break;
             case 'change_color':                
                 serverData.forEach((elem) => {

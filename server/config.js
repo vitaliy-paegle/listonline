@@ -7,7 +7,7 @@ const config = {
         const data = 
         [
             {
-                tabName: 'Вкладка №1', activ: true, mainColor: 'rgb(182,182,182,1)',
+                tabName: 'Вкладка №1', activ: true, mainColor: '#0FA958',
                 articles: [
                     {
                         content: '<div style="font-weight: 900;">Самое время создать свою первую заметку...</div>',
@@ -18,6 +18,16 @@ const config = {
             }
         ]
         return data;        
+    },
+    emailInfo: {
+        host: "smtp.jino.ru",
+        port: 465,
+        secure: true,
+        auth: {
+          user: "mail@listonline.ru",
+          pass: "vv19851985",
+        }
     }
+
 }
 module.exports = config;

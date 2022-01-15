@@ -192,7 +192,7 @@ export const tabsPanel = {
                 cursorToEndTab(tab);
                 let presentValue = tab.children[0].innerHTML;
                 let selection = document.getSelection(); 
-                checkEndResizingWindow();
+                //checkEndResizingWindow();
          
                 function deactivTab(){
                     tab.children[0].innerHTML = presentValue;
@@ -212,7 +212,7 @@ export const tabsPanel = {
                             clearInterval(check);
                             window.addEventListener('resize', deactivTab)
                         }
-                    }, 500)
+                    }, 1500)
                 }
 
                 tabContent.addEventListener('input', (event) => {

@@ -3,16 +3,18 @@ import {tabsPanel} from './tabs_panel.js';
 import {connectServer} from './connect_server.js'
 export const connect = {
     exchangeDataServer: async function(action, content) {                
-        const searchString = new URLSearchParams(window.location.search);
+        //const searchString = new URLSearchParams(window.location.search);
         let data;
             switch (action) {
                 case 'getData':
-                    data = await connectServer.getData({id: searchString.get('id')},'https://listonline.ru/user_page/get_data');
+                    //data = await connectServer.getData({id: searchString.get('id')},'https://listonline.ru/user_page/get_data');
+                    data = await connectServer.getData({id: localStorage.getItem(`listID`)},'https://listonline.ru/user_page/get_data');
                     console.log(JSON.parse(data))
                     return data != undefined ? JSON.parse(data) : [];                    
                 break;            
                 case 'setData':
-                    data = await connectServer.setData({id: searchString.get('id'), content: content},'https://listonline.ru/user_page/set_data');
+                    //data = await connectServer.setData({id: searchString.get('id'), content: content},'https://listonline.ru/user_page/set_data');
+                    data = await connectServer.setData({id: localStorage.getItem(`listID`), content: content},'https://listonline.ru/user_page/set_data');
                     return data == 'successful' ? data : 'error';                    
                 break;
             }
